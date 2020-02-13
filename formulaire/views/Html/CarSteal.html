@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../Css/mastercss.css">
+  <link rel="stylesheet" href="../Css/steal.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <script src="https://kit.fontawesome.com/1d36ad2924.js"></script>
+
+  <title>Formulaire vol 1</title>
+</head>
+<body>
+  <form method="POST" action="registration.php" id="form" enctype="application/x-www-form-urlencoded">
+    <div class="bg_modal hide" name="Modal_de_connexion">
+      <div class="" id="vide">
+
+      </div>
+      <div class="modal_content" id="Modal_Connexion">
+        <div class="flex_centre">
+          <div class="croix">
+            <i class="fas fa-times"></i>
+          </div>
+          <img class="logo_size" src="../Image/logo.png" alt="logo de tacotroc">
+        </div>
+        <!-- <form id="form" action=""> -->
+        <div class="modal_form">
+          <p class="ligne"><input type="email" class="champ_input" value="" id="inputMail" placeholder="Adresse email"pattern="[a-zA-Z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}"></p>
+          <p class="ligne"><input type="password" class="champ_input" value="" id="inputPassword1" placeholder="Mot de passe" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,12}"></p>
+          <input type="submit"></input>
+        </div>
+        <!-- </form> -->
+      </div>
+    </div>
+    <div class="formulaire">
+      <h1>Vol</h1>
+      <p class="asterisk" id="size">Les champs avec<abbr> * </abbr>sont obligatoires.</p>
+      <p class="ligne flex_espace">
+        <input type="button" value="Se connecter" id="inputConnexion" class="bouton_choix" onclick="affichermodal()">
+        <input type="button" value="Sans Compte" id="inputAnonyme" class="bouton_choix" onclick="anonyme()">
+      </p>
+      <div class="" id="div_anonyme">
+        <h2>Internaute</h2>
+        <p class="ligne"><label class="labelcategorie" for="inputMarque">Nom</label><abbr> * </abbr><input type="text" id="anoNom" value="" class="champ_input" placeholder="Nom"></p>
+        <p class="ligne"><label class="labelcategorie" for="inputMarque">Prenom</label><abbr> * </abbr><input type="text" id="anoPrenom" value="" class="champ_input" placeholder="Prenom"></p>
+        <p class="ligne"><label class="labelcategorie" for="inputMarque">Mail</label><abbr> * </abbr><input type="email" id="anoMail" value="" class="champ_input" placeholder="Mail"></p>
+      </div>
+      <div class="">
+        <hr>
+        <div class="flex_espace">
+          <div id="Proprio">
+            <label for="checkboxProprio"><input type="checkbox" id="checkboxProprio" value="" onchange="estproprio()" checked>je suis propriétaire du véhicule.</label>
+            <label for="checkboxNonProprio"><input type="checkbox" id="checkboxNonProprio" value="" onchange="estpasproprio()">je ne suis pas propriétaire du véhicule.</label>
+          </div>
+        </div>
+        <div class="" id="div_proprio">
+          <!-- <form id="form" action=""> -->
+          <p class="ligne"><label class="labelcategorie" for="inputMarque">Nom Proprio</label><abbr> * </abbr></p>
+          <p class="ligne"><input type="text" id="NomProprio" value="" class="champ_input" placeholder="Nom du propriétaire"></p>
+          <p class="ligne"><label class="labelcategorie" for="inputMarque">Mail</label><abbr> * </abbr></p>
+          <p class="ligne"><input type="text" id="PrenomProprio" value="" class="champ_input" placeholder="Prenom du propriétaire"></p>
+          <p class="ligne"><label class="labelcategorie" for="inputMarque">Mail</label><abbr> * </abbr></p>
+          <p class="ligne"><input type="tel" id="TelephoneProprio" value="" class="champ_input" placeholder="Téléphone du propriétaire"></p>
+          <p class="ligne"><label class="labelcategorie" for="inputMarque">Mail</label><abbr> * </abbr></p>
+          <p class="ligne"><input type="email" id="MailProprio" value="" class="champ_input" placeholder="Mail du propriétaire"></p>
+          <!-- </form> -->
+        </div>
+      </div>
+      <hr>
+      <div class="" id="info_voiture">
+        <p class="ligne"><input type="text" id="ImmatVoiture" value="" class="champ_input" placeholder="Immat de la voiture"></p>
+        <p class="ligne"><input type="text" id="MarqueVoiture" value="" class="champ_input" placeholder="Marque de la voiture"></p>
+        <p class="ligne"><input type="text" id="ModelVoiture" value="" class="champ_input" placeholder="Model de la voiture"></p>
+        <p class="ligne"><input type="text" id="TypeVoiture" value="" class="champ_input" placeholder="Type de la voiture"></p>
+        <p class="ligne"><input type="text" id="AnneVoiture" value="" class="champ_input" placeholder="Annee de la voiture"></p>
+        <p class="ligne"><input type="text" id="SerieVoiture" value="" class="champ_input" placeholder="Serie de la voiture"></p>
+        <p class="ligne"><input type="text" id="Couleur_1Voiture" value="" class="champ_input" placeholder="Couleur primaire de la voiture"></p>
+        <p class="ligne"><input type="text" id="Coueleur_2Voiture" value="" class="champ_input facultatif" placeholder="Couleur secondaire de la voiture"></p>
+        <p class="ligne"><label class="labelcategorie" for="inputPhoto">Photo de la voiture</label></p>
+        <div class="block_image">
+          <div class="Zone_Input_Image">
+            <p class="image_nonchoisis"><input class="input_photo" type="file" id="InputPhoto" accept="image/png, image/jpeg" multiple onchange="document.getElementById('selectImg').src = window.URL.createObjectURL(this.files[0]);document.getElementById('cross1').style.display='block'" />
+              <img class="pre_image" src="../Image/cross.png" alt="croix" id="cross1" onclick="closeImg3(this)" /></p>
+              <div class="photo_choisis"><img class="affichage_photo" src="../Image/selectImg.png" alt="selection d'images" id="selectImg" /></div>
+            </div>
+            <div class="Zone_Input_Image">
+              <p class="image_nonchoisis"><input class="input_photo" type="file" id="InputPhoto" accept="image/png, image/jpeg" multiple onchange="document.getElementById('selectImg2').src = window.URL.createObjectURL(this.files[0]);document.getElementById('cross2').style.display='block'" />
+                <img class="pre_image" src="../Image/cross.png" alt="croix" id="cross2" onclick="closeImg2(this)" /></p>
+                <div class="photo_choisis"><img class="affichage_photo" src="../Image/selectImg.png" alt="selection d'images" id="selectImg2" /></div>
+              </div>
+              <div class="Zone_Input_Image">
+                <p class="image_nonchoisis"><input class="input_photo" type="file" id="InputPhoto" accept="image/png, image/jpeg" multiple onchange="document.getElementById('selectImg3').src = window.URL.createObjectURL(this.files[0]); document.getElementById('cross3').style.display='block'" />
+                  <img class="pre_image" src="../Image/cross.png" alt="croix" id="cross3" onclick="closeImg(this)" /></p>
+                  <div class="photo_choisis"><img class="affichage_photo" src="../Image/selectImg.png" alt="selection d'images" id="selectImg3" /></div>
+                </div>
+          </div>
+
+      </div>
+    </div>
+  </form>
+</body>
+<script src="../Js/masterjs.js"></script>
+<script src="../Js/popup.js"></script>
+</html>

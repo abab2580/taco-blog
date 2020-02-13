@@ -1,0 +1,59 @@
+
+  <form method="POST" action="registration.php" id="form" enctype="application/x-www-form-urlencoded">
+    <div class="formulaire">
+      <h1>Ajouter Une voiture a la BDD</h1>
+      <p class="asterisk" id="size">Les champs avec<abbr> * </abbr>sont obligatoires.</p>
+      <p class="ligne"><label class="labelcategorie" for="inputImmat">Immatriculation</label><abbr> *</abbr></p>
+      <p class="ligne"><input type="text" class="champ_input" value="" id="inputImmat" placeholder="Immaticulation du véhicule" name="Immatriculate" required></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputMarque">Marque</label><abbr> *</abbr></p>
+      <p class="ligne"><input type="text" class="champ_input" value="" id="inputMarque" placeholder="Marque du véhicule." name="Marque" required></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputModel">Modéle</label><abbr> *</abbr></p>
+      <p class="ligne"><input type="text" class="champ_input" value="" id="inputModel" placeholder="Modéle du véhicule." name="Model" required></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputPays">Pays</label><abbr> *</abbr></p>
+      <p class="ligne"><input type="text" class="champ_input" value="" id="inputPays" placeholder="Pays du véhicule." name="Pays" required></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputColor1">Couleur 1</label><abbr> *</abbr></p>
+      <p class="ligne"><input type="text" class="champ_input" value="" id="inputCouleur1" placeholder="Couleur Principale du véhicule." name="Couleur" required></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputColor2">Couleur 2</label></p>
+      <p class="ligne"><input type="text" class="champ_input facultatif" value="" id="inputCouleur2" placeholder="Couleur secondaire du véhicule." name="Couleur"></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputVersion">Version</label></p>
+      <p class="ligne"><input type="text" class="champ_input facultatif" value="" id="inputVersion" placeholder="Version du véhicule." name="Version"></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputType">Type</label></p>
+      <p class="ligne"><input type="text" class="champ_input facultatif" value="" id="inputType" placeholder="Type du véhicule." name="Type"></p>
+      <p class="ligne"><label class ="labelcategorie facultatif" for="inputCylinder">Cylindrée</label></p>
+      <p class="ligne"><input type="text" class="champ_input facultatif" value="" id="inputCylinder" placeholder="Cylindrée du véhicule." name="Cylindrée"></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputAnnee">Annee</label></p>
+      <p class="ligne"><input type="text" class="champ_input facultatif" value="" id="inputAnnee" placeholder="Annee du véhicule." name="Annee"></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputOwner">Propriétaire</label></p>
+      <p class="ligne"><input type="text" class="champ_input facultatif" value="" id="inputOwner" placeholder="Propriétaire du véhicule." name="Propriétaire"></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputMuseum">Musée</label></p>
+      <p class="ligne"><input type="text" class="champ_input facultatif" value="" id="inputMuseum" placeholder="Musée du véhicule." name="Musée"></p>
+      <p class="ligne"><label class ="labelcategorie" for="inputClub">Club</label></p>
+      <p class="ligne"><input type="text" class="champ_input facultatif" value="" id="inputClub" placeholder="Club du véhicule." name="Club"></p>
+      <!-- <p class="ligne"><label class="labelcategorie" for="inputPhoto">Photo</label></p> -->
+      <!-- <div class="block_image">
+        <div class="Zone_Input_Image">
+          <p class="image_nonchoisis"><input class="input_photo" type="file" id="InputPhoto" accept="image/png, image/jpeg" multiple onchange="document.getElementById('selectImg').src = window.URL.createObjectURL(this.files[0]);document.getElementById('cross1').style.display='block'" />
+            <img class="pre_image" src="../Image/cross.png" alt="croix" id="cross1" onclick="closeImg3(this)" /></p>
+            <div class="photo_choisis"><img class="affichage_photo" src="../Image/selectImg.png" alt="selection d'images" id="selectImg" /></div>
+          </div>
+          <div class="Zone_Input_Image">
+            <p class="image_nonchoisis"><input class="input_photo" type="file" id="InputPhoto" accept="image/png, image/jpeg" multiple onchange="document.getElementById('selectImg2').src = window.URL.createObjectURL(this.files[0]);document.getElementById('cross2').style.display='block'" />
+              <img class="pre_image" src="../Image/cross.png" alt="croix" id="cross2" onclick="closeImg2(this)" /></p>
+              <div class="photo_choisis"><img class="affichage_photo" src="../Image/selectImg.png" alt="selection d'images" id="selectImg2" /></div>
+            </div>
+            <div class="Zone_Input_Image">
+              <p class="image_nonchoisis"><input class="input_photo" type="file" id="InputPhoto" accept="image/png, image/jpeg" multiple onchange="document.getElementById('selectImg3').src = window.URL.createObjectURL(this.files[0]); document.getElementById('cross3').style.display='block'" />
+                <img class="pre_image" src="../Image/cross.png" alt="croix" id="cross3" onclick="closeImg(this)" /></p>
+                <div class="photo_choisis"><img class="affichage_photo" src="../Image/selectImg.png" alt="selection d'images" id="selectImg3" /></div>
+              </div>
+            </div> -->
+            <div class="flex_centre">
+              <input type="submit" class="bouton_envoie" name="" value="Valider">
+            </div>
+            <div id="Box_Suggestion">
+              <p id="Proposition_1">Test Proposition 1</p>
+              <p id="Proposition_2">Test Proposition 2</p>
+              <p id="Proposition_3">Test Proposition 2</p>
+            </div>
+          </div>
+        </form>
